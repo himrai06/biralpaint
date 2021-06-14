@@ -40,6 +40,18 @@ class Page extends Dbh {
     };
   }
 
+  public function getGiftProduct() {
+    $status = '1';
+    $sql = "SELECT * FROM gift_products where status= ? Order By id DESC " ;
+    $stmt = $this->connect()->prepare($sql);
+    $stmt->execute([$status]);
+    $stmt->execute();
+    while($result = $stmt->fetchAll()) {
+     
+      return $result;
+    };
+  }
+
   public function getSettings() {
     $id = 1;
     $sql = "SELECT * FROM settings WHERE id = ?";

@@ -31,11 +31,11 @@
 		<div class="container">
 		   <?php if($setting['web_logo'] != null && $setting['web_logo'] != ''){?>
 			<!-- if logo is image enable this    -->
-			<a class="navbar-brand" href="./">
-				<img src="<?php echo Page::BASE_URL.'uploads/logo/'.$setting['web_logo']; ?>" alt="Your logo" title="Your logo" style="height:35px;" />
+			<a  href="./">
+				<img src="<?php echo Page::BASE_URL.'uploads/logo/'.$setting['web_logo']; ?>" alt="Your logo" title="Your logo" style="width:150px; he" />
 				</a>
 	       <?php }else {?>
-			 <a class="navbar-brand" href="./">Birla <span>Paint</span></a>
+			 <a  href="./">Birla <span>Paint</span></a>
 			<?php }?> 			
 			<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +53,9 @@
 					</li>
 					<li class="nav-item @@services__active">
 						<a class="nav-link" href="product">Product</a>
+					</li>
+					<li class="nav-item @@gift__active">
+						<a class="nav-link" href="gift">Gift</a>
 					</li>
 					<li class="nav-item @@contact__active">
 						<a class="nav-link" href="contact">Contact</a>

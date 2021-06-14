@@ -26,12 +26,13 @@
                 
                         if($products->getAllProduct()) {
                             $i = 1;
-                            foreach($products->getAllProduct() as $product) {?>
+                            foreach($products->getGiftProduct() as $product) {?>
                                 <div class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="column">
-                                        <a href="#"><img src="<?php echo Page::BASE_URL.'uploads/product/'.$product['image'];?>" alt="" class="img-responsive" /></a>
+                                        <a href="#"><img src="<?php echo Page::BASE_URL.'uploads/gift-product/'.$product['image'];?>" alt="" class="img-responsive" /></a>
                                         <h4><a href="#"><?php echo $product['product_name'];?></a></h4>
-                                        <p class="mt-4 pb-3"><?php echo $product['description'];?></p>
+                                        <h6><i class="fas fa-coins" style="color:#f7ba05"></i> <?php echo $product['coins'];?></h6>
+                                        <!-- <p class="mt-4 pb-3"><?php echo $product['description'];?></p> -->
                                     </div>
                                 </div>
                                 <?php if($i % 4 == 0) { ?>
